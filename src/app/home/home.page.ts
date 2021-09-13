@@ -7,6 +7,17 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+
+  private foto = [
+    {
+      id:'1',
+      imageURL:'https://www.ngenespanol.com/wp-content/uploads/2018/09/Monumentos-mundo.jpg'
+
+    }
+
+
+  ];
+
   constructor() {}
 
 }

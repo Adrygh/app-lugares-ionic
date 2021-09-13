@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lugares Emblematicos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>   <!--esto es para cuando hay muchos elementos te pone un scrol para que sigas navegando-->
+    <ion-item *ngFor="let item of lugares" [routerLink]="['/lugares',item.id]">          <!--se encarga de presentar una lista de elementos en pantalla combinando el concepto bucle y plantilla-->
+      <ion-avatar slot="start">                         <!--esto es para que en forma de avatar se ponga al inicio y no interfiera con el texto-->
+        <ion-img [src]="item.imageURL"></ion-img>    <!-- aqui enlazamos la imagen que metimos con la etiqueta imageURL: en lugares.page.ts -->
+      </ion-avatar>
+      <ion-label>
+        
+       {{item.title}} <!--muestra que atributo del elemento queremos mostrar,si queremos mostrar mas hay que ponerlos por separado en otro label-->
+      </ion-label>
+    
+
+    </ion-item>
+  </ion-list>
+</ion-content>
